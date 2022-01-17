@@ -25,4 +25,3 @@ resource "aws_instance" "public-server2" {
     Name = "public-server2"
   }
 }
-
