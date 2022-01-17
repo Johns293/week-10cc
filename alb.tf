@@ -1,8 +1,10 @@
+*/GOOD TRAINING IS HERE
 resource "aws_lb" "project-9-lb" {
   name               = "project-9-lb"
   load_balancer_type = "application"
   subnets = [
     aws_subnet.public-subnet-1.id, aws_subnet.public-subnet-3.id
+    
   ]
 
   security_groups = [aws_security_group.SG-HTTP.id]
@@ -33,6 +35,7 @@ resource "aws_lb_listener" "project-9" {
 
 resource "aws_security_group" "SG-LB" {
   description = "Allow access to Application Load Balancer"
+  
   name        = "local.prefix"
   vpc_id      = aws_vpc.project-9-vpc.id
 
